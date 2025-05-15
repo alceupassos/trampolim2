@@ -1,0 +1,196 @@
+:root {
+  --color-primary: #FFBE0B;
+  --color-secondary: #121212;
+  --color-tertiary: #FFFFFF;
+  --color-accent-dark: #333333;
+  --color-form-bg: #222222; /* Levemente mais escuro que o background */
+  --color-placeholder: #999999; /* Cinza claro para placeholder */
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--color-secondary);
+  color: var(--color-tertiary);
+  font-family: sans-serif; /* Definir a família de fonte base */
+  line-height: 1.5;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: var(--color-tertiary);
+}
+
+/* Tipografia base conforme descrição */
+/* Ajustes de tamanho e peso serão aplicados em componentes específicos */
+h1 {
+  font-weight: bold; /* Título principal */
+}
+
+h2 {
+  font-weight: 600; /* Subtítulos (Semi-bold) */
+}
+
+p {
+  font-size: 16px; /* Corpo de texto */
+}
+
+small {
+    font-size: 14px; /* Texto pequeno/auxiliar */
+}
+
+a {
+    color: var(--color-primary); /* Exemplo: links em amarelo */
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Estilos para os componentes principais conforme fornecido */
+/* Note: Para uma aplicação maior, usar CSS Modules seria recomendado para evitar conflitos de nomes */
+
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 75px;
+  padding: 0 40px;
+  background-color: var(--color-secondary);
+  position: fixed;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-cta {
+  display: flex;
+  gap: 16px;
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: var(--color-secondary);
+  border: none;
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-primary:hover {
+    opacity: 0.9;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: var(--color-tertiary);
+  border: 1px solid var(--color-tertiary);
+  border-radius: 8px;
+  padding: 12px 24px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.btn-secondary:hover {
+    opacity: 0.9;
+}
+
+/* Exemplo de estilo para botão com ícone */
+.btn-icon {
+    background: none;
+    border: none;
+    color: var(--color-tertiary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px; /* Espaço entre ícone e texto se houver */
+}
+
+.form-control {
+  height: 54px;
+  background-color: var(--color-form-bg);
+  border: none;
+  border-radius: 8px;
+  color: var(--color-tertiary);
+  padding: 0 16px;
+  width: 100%;
+  margin-bottom: 16px; /* Adicionar margem inferior para espaçamento entre campos */
+  box-sizing: border-box; /* Incluir padding na largura total */
+}
+
+.form-control::placeholder {
+  color: var(--color-placeholder);
+}
+
+.card {
+  background-color: var(--color-form-bg); /* Reutilizar a cor de fundo do formulário */
+  border-radius: 12px;
+  padding: 28px;
+  margin-bottom: 24px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%; /* Garantir que o container use a largura total disponível */
+  box-sizing: border-box; /* Incluir padding na largura total */
+}
+
+.hero-section {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px 0;
+  /* Adicionar padding superior para compensar a navbar fixa */
+  padding-top: 120px; /* Ajustar conforme a altura da navbar + espaço */
+}
+
+.hero-title {
+  font-size: 48px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: var(--color-tertiary); /* Garantir que o título herde a cor principal de texto */
+}
+
+.hero-title span {
+  color: var(--color-primary);
+}
+
+/* Estilos para elementos de destaque (tag NOVO) */
+.tag {
+    background-color: var(--color-primary); /* Amarelo escuro */
+    color: var(--color-secondary); /* Texto preto */
+    font-weight: 600;
+    padding: 4px 8px;
+    border-radius: 4px;
+    display: inline-block; /* Para que padding e margin funcionem corretamente */
+    margin-right: 8px; /* Espaçamento após a tag */
+    font-size: 14px; /* Tamanho da fonte como texto pequeno */
+}
+
+/* Adicionar estilos para o rodapé base */
+footer {
+    background-color: var(--color-secondary);
+    color: var(--color-tertiary);
+    padding: 40px 0;
+    text-align: center; /* Centralizar texto do copyright se estiver na parte inferior */
+}
+
+/* Sistema de Grid (Conceitual - a implementação real depende de como você estruturar seus componentes) */
+/* Em CSS puro, você usaria display: grid ou flexbox nos containers */
+/* Exemplo usando grid para um container */
+/* .grid-container { display: grid; grid-template-columns: repeat(12, 1fr); gap: 24px; } */
+/* .col-span-6 { grid-column: span 6; } */
+
+/* Breakpoints (Conceitual - Media Queries) */
+/* @media (min-width: 768px) { / * Estilos para tablet e desktop * / } */
+/* @media (min-width: 1024px) { / * Estilos para desktop * / } */
